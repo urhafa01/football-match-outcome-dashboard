@@ -1,0 +1,11 @@
+*.sqlite
+*.sqlite*
+*.db
+*.pkl
+database.sqlite 3
+__pycache__/
+.ipynb_checkpoints/
+.history/
+.DS_Store
+venv/
+.env 
