@@ -26,13 +26,11 @@ home_wr = st.slider("Home win rate", 0.0, 1.0, 0.6)
 away_wr = st.slider("Away win rate", 0.0, 1.0, 0.4)
 
 data = [[
-    home_pts, home_gf, home_ga,
-    away_pts, away_gf, away_ga,
-    home_pts-away_pts,
-    home_gf-away_gf,
-    home_ga-away_ga,
-    home_wr, away_wr,
-    home_wr-away_wr
+  home_pts, away_pts,
+  home_gf,  away_gf,
+  home_ga,  away_ga,
+  home_wr,  away_wr,
+  home_pts - away_pts
 ]]
 
 if st.button("Predict"):
