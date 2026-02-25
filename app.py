@@ -1,9 +1,17 @@
-import streamlit as st
+import os
 import joblib
+import streamlit as st
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model.joblib")
+
+st.write("Looking for model at:", MODEL_PATH)
+
+model = joblib.load(MODEL_PATH)
 
 st.title("⚽ Football Match Outcome Predictor")
 
-model = joblib.load("match_model.pkl")
+model = joblib.load("model.joblib")
 
 home_pts = st.slider("Home last5 points", 0.0, 3.0, 1.5)
 away_pts = st.slider("Away last5 points", 0.0, 3.0, 1.2)
